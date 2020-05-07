@@ -21,6 +21,7 @@ public class MoreArrayFun {
 		printStrings();
 		printReverse();
 		printOther();
+		printRandom();
 	}
 
 	// 2. Write a method that takes an array of Strings and prints all the Strings
@@ -59,6 +60,10 @@ public class MoreArrayFun {
 	public static void printRandom() {
 		Random rand = new Random();
 		String s[] = { w1, w2, w3, w4, w5 };
+		int random = rand.nextInt(s.length);
+		s[random] = s[1];
+		int random2 = rand.nextInt(s.length);
+		System.out.println(random2);
 		
 		for (int i = 0; i < s.length; i++) {
 			System.out.println(s[i]);
